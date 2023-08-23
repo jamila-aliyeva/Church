@@ -1,0 +1,3 @@
+@function container($width, $padding, $mb-padding) {
+  @return $width - 2 * $padding + 2 * $mb-padding + px;
+}

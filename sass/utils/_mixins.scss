@@ -1,0 +1,70 @@
+@use "functions" as func;
+@use "variables" as var;
+
+@mixin container($padding: 110) {
+  $mb-padding: 20;
+  max-width: func.container(1500, $padding, $mb-padding);
+  padding-left: $mb-padding + px;
+  padding-right: $mb-padding + px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin btn {
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+@mixin primary-btn {
+  padding: 24px 64px;
+  @include btn;
+  background-color: var.$primary-color;
+  color: #1c1d28;
+  &:hover {
+    background: #f2c79b;
+  }
+}
+
+@mixin secondary-btn {
+  padding: 24px 64px;
+  background-color: var.$black-color;
+  @include btn;
+  backdrop-filter: blur(40px);
+  color: var.$primary-color;
+  &:hover {
+    color: var.$white-color;
+  }
+}
+
+@mixin nav-btn {
+  padding: 20px 48px;
+  background-color: var.$primary-color;
+  @include btn;
+  color: #1c1d28;
+  &:hover {
+    background: #f2c79b;
+  }
+}
+
+@mixin title {
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var.$black-color;
+}
+
+@mixin title-2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  @include title;
+}
+
+@mixin title-4 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  @include title;
+}

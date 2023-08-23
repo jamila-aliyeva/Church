@@ -1,0 +1,9 @@
+@use "../utils/mixins" as mxn;
+
+.container {
+  @include mxn.container;
+}
+
+.container-sm {
+  @include mxn.container(238);
+}
